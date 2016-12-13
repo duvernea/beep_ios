@@ -32,6 +32,9 @@
                                         <state key="normal" title="Start">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRZ-nr-jV5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmW-D9-bcv">
                                         <rect key="frame" x="196.5" y="0.0" width="146.5" height="41"/>
@@ -40,27 +43,41 @@
                                         <state key="normal" title="Stop">
                                             <color key="titleColor" red="0.9789717148" green="1" blue="0.95962580730000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="stopButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5EO-4e-vHU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="GmW-D9-bcv" firstAttribute="leading" secondItem="iO7-MX-O1H" secondAttribute="trailing" id="THk-o1-RY7"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZc-vu-qQk">
-                                <rect key="frame" x="150.5" y="386" width="73" height="41"/>
+                                <rect key="frame" x="151" y="386" width="73" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="replayButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hy1-rG-AMa"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uV-ba-gf4">
+                                <rect key="frame" x="151.5" y="60" width="72.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6uV-ba-gf4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="8qx-m8-28f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="peF-cv-PHJ" secondAttribute="trailing" id="GNC-iX-vP3"/>
                             <constraint firstItem="peF-cv-PHJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q0E-bP-Q19"/>
                             <constraint firstItem="eZc-vu-qQk" firstAttribute="top" secondItem="peF-cv-PHJ" secondAttribute="bottom" constant="125" id="X2g-Zg-6Ez"/>
                             <constraint firstItem="peF-cv-PHJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="YCm-t1-bLg"/>
                             <constraint firstItem="eZc-vu-qQk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dQ3-J8-Ego"/>
+                            <constraint firstItem="6uV-ba-gf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJu-Yg-udV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="6uV-ba-gf4" id="eDH-fw-zsO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
