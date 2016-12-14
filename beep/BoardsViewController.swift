@@ -17,7 +17,8 @@ class BoardsViewController: UITableViewController {
         return boardsStore.allBoards.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        // Get a new or recycled cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
         let board = boardsStore.allBoards[indexPath.row]
         cell.textLabel?.text = board.name
