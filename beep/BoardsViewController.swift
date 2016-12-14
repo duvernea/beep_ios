@@ -10,4 +10,8 @@ import UIKit
 
 class BoardsViewController: UITableViewController {
     
+    var boardsStore: BoardStore!
+    
+    
+    
 }

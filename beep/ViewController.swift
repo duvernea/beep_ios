@@ -12,11 +12,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myTextField1: UITextField!
     @IBOutlet var myTextField2: UITextField!
+    
+    var myBoard: Board?
 
     
     @IBAction func startButtonPress(_ sender: UIButton) {
         myLabel.text = "Started.."
-    
+        myBoard = Board(name: "Test Board Name", image: nil)
+        print(myBoard?.image ?? "image is nil")
+        
     }
     @IBAction func stopButtonPress(_ sender: UIButton) {
         myLabel.text = "Stopped.."
