@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var myLabel: UILabel!
+    @IBOutlet var myTextField1: UITextField!
+    @IBOutlet var myTextField2: UITextField!
+
     
     @IBAction func startButtonPress(_ sender: UIButton) {
         myLabel.text = "Started.."
@@ -21,9 +24,24 @@ class ViewController: UIViewController {
     @IBAction func replayButtonPress(_ sender: UIButton) {
         myLabel.text = "Replay"
     }
+    @IBAction func testTest() {
+        print("test function")
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField === myTextField1 {
+            print ("field 1")
+        } else {
+            print ("field 2")
+        }
+        print("Current text: \(textField.text)")
+        print("Replacement text: \(string)")
+        return true
+    }
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("Text Field Should Clear")
+        return false
+    }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,7 +53,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

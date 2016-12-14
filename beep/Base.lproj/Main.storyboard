@@ -55,6 +55,7 @@
                                 <state key="normal" title="Replay"/>
                                 <connections>
                                     <action selector="replayButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hy1-rG-AMa"/>
+                                    <action selector="testTest" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4N-Rp-Zuy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uV-ba-gf4">
@@ -63,20 +64,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-Va-04Q">
+                                <rect key="frame" x="34" y="135" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4p4-Qo-jz9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TjJ-ZS-01H">
+                                <rect key="frame" x="139" y="318" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KCy-uy-gAn"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Z5-Va-04Q" firstAttribute="top" secondItem="6uV-ba-gf4" secondAttribute="bottom" constant="39" id="2ps-Rx-6jD"/>
                             <constraint firstItem="6uV-ba-gf4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="8qx-m8-28f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="peF-cv-PHJ" secondAttribute="trailing" id="GNC-iX-vP3"/>
                             <constraint firstItem="peF-cv-PHJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q0E-bP-Q19"/>
                             <constraint firstItem="eZc-vu-qQk" firstAttribute="top" secondItem="peF-cv-PHJ" secondAttribute="bottom" constant="125" id="X2g-Zg-6Ez"/>
                             <constraint firstItem="peF-cv-PHJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="YCm-t1-bLg"/>
+                            <constraint firstItem="6Z5-Va-04Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="ZLH-1t-188"/>
                             <constraint firstItem="eZc-vu-qQk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dQ3-J8-Ego"/>
                             <constraint firstItem="6uV-ba-gf4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJu-Yg-udV"/>
+                            <constraint firstItem="6Z5-Va-04Q" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wSn-cm-aQ5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myLabel" destination="6uV-ba-gf4" id="eDH-fw-zsO"/>
+                        <outlet property="myTextField1" destination="6Z5-Va-04Q" id="8KJ-UT-3Ar"/>
+                        <outlet property="myTextField2" destination="TjJ-ZS-01H" id="euy-iV-hHy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
