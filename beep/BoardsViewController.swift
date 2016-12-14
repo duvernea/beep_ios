@@ -14,13 +14,14 @@ class BoardsViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return boardsStore.allBoards.count
-        return 5
+        return boardsStore.allBoards.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("test")
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
-        cell.textLabel?.text = "Hi tester"
+        
+        let board = boardsStore.allBoards[indexPath.row]
+        cell.textLabel?.text = board.name
+        cell.imageView?.image = #imageLiteral(resourceName: "gorilla")
         return cell
     }
  
