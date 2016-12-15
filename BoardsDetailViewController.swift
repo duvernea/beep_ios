@@ -17,6 +17,6 @@ class BoardsDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         //textLabel.text = board.name
-        textLabel.text = "TEST TEST TEST"
+        textLabel.text = board.name
     }
 }

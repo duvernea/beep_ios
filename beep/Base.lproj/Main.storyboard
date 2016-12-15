@@ -174,7 +174,7 @@
                                         <connections>
                                             <outlet property="boardImageView" destination="efC-0H-Dcf" id="56k-p4-Dwy"/>
                                             <outlet property="boardNameLabel" destination="53z-CK-1f8" id="fzd-zv-86l"/>
-                                            <segue destination="ZtJ-fO-rrY" kind="show" id="vtU-mw-7xK"/>
+                                            <segue destination="ZtJ-fO-rrY" kind="show" identifier="showItem" id="vtU-mw-7xK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -52,6 +52,26 @@ class BoardsViewController: UIViewController, UITableViewDataSource {
         cell.boardImageView?.image = #imageLiteral(resourceName: "gorilla")
         return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(#function)
+        // If the triggered segue is the "showItem" segue
+        switch segue.identifier {
+        case "showItem"?:
+            // Figure out which row was just tapped
+            print("row selected: \(tableView.indexPathForSelectedRow?.row)")
+            if let row = tableView.indexPathForSelectedRow?.row {
+                // Get the item associated with this row and pass it along
+                let board = boardsStore.allBoards[row]
+                let boardsDetailViewController = segue.destination as! BoardsDetailViewController
+                boardsDetailViewController.board = board
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+
+    }
+    
+
     
 
 }

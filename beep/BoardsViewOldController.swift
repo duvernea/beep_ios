@@ -24,8 +24,6 @@ class BoardsViewOldController: UITableViewController {
         
         
     }
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return boardsStore.allBoards.count
     }
