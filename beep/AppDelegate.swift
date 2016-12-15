@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // **** Create BoardStore here based on the Dependency Inversion Principle
         // - Decouple objects in an app by inverting certain dependencies between them
         let boardStore = BoardStore()
+        let imageStore = ImageStore()
+
         
         // Access the BoardsViewController and set its item store
         let navController = window!.rootViewController as! UINavigationController

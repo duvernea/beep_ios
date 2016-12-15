@@ -222,20 +222,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4H-N8-1SQ">
+                                <rect key="frame" x="24" y="142" width="322" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="sz8-qs-EpW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="z2J-48-Pjs" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="59Y-yD-IBX"/>
+                            <constraint firstItem="h4H-N8-1SQ" firstAttribute="top" secondItem="z2J-48-Pjs" secondAttribute="bottom" constant="49" id="VXU-B9-8AC"/>
                             <constraint firstItem="z2J-48-Pjs" firstAttribute="top" secondItem="0Hl-qB-pMB" secondAttribute="bottom" constant="8" id="X3s-CY-Fgd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h4H-N8-1SQ" secondAttribute="trailing" constant="13" id="fF8-mt-0v7"/>
+                            <constraint firstItem="h4H-N8-1SQ" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="fYX-QW-wzz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="boardImage" destination="h4H-N8-1SQ" id="HjT-cM-sHE"/>
                         <outlet property="textLabel" destination="z2J-48-Pjs" id="soB-uc-H3f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcN-0D-knG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-513" y="887"/>
+            <point key="canvasLocation" x="-514.39999999999998" y="886.50674662668678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fvt-Ii-bUz">

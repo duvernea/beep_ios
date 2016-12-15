@@ -10,6 +10,7 @@ import UIKit
 
 class BoardsDetailViewController: UIViewController {
     @IBOutlet var textLabel: UILabel!
+    @IBOutlet var boardImage: UIImageView!
     
     var board: Board!
     
@@ -24,5 +25,8 @@ class BoardsDetailViewController: UIViewController {
         
         //textLabel.text = board.name
         textLabel.text = board.name
+        boardImage.image = #imageLiteral(resourceName: "Deer")
+        boardImage.contentMode = UIViewContentMode.left;
+        
     }
 }
