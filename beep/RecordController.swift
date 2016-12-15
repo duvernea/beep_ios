@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class RecordController: UIViewController, UITextFieldDelegate {
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myTextField1: UITextField!
     @IBOutlet var myTextField2: UITextField!
