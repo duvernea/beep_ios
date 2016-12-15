@@ -13,8 +13,14 @@ class BoardsDetailViewController: UIViewController {
     
     var board: Board!
     
+    let appName = "beep"
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Set navigation bar title to app name (for now at least)
+        navigationItem.title = appName
+        
         
         //textLabel.text = board.name
         textLabel.text = board.name
