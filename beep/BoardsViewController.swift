@@ -12,11 +12,16 @@ class BoardsViewController: UIViewController, UITableViewDataSource {
     
     var boardsStore: BoardStore!
 
+    @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        //tableView.estimatedRowHeight = 100
+        tableView.rowHeight = 150
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,11 +45,11 @@ class BoardsViewController: UIViewController, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Get a new or recycled cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BoardItemCell", for: indexPath) as! BoardItemCell
         
         let board = boardsStore.allBoards[indexPath.row]
-        cell.textLabel?.text = board.name
-        cell.imageView?.image = #imageLiteral(resourceName: "gorilla")
+        cell.boardNameLabel?.text = board.name
+        cell.boardImageView?.image = #imageLiteral(resourceName: "gorilla")
         return cell
     }
     
