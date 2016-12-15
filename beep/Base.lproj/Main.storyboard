@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="107.49625187406298"/>
         </scene>
-        <!--Boards View Controller-->
+        <!--beep-->
         <scene sceneID="G0T-7q-9Wh">
             <objects>
                 <viewController id="QOw-ED-x2a" customClass="BoardsViewController" customModule="beep" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                                     <constraint firstAttribute="height" constant="44" id="tKr-dE-miu"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="7qR-md-7FP"/>
+                                    <barButtonItem systemItem="add" id="7qR-md-7FP"/>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-HG-fb4">
@@ -168,55 +168,11 @@
                             <constraint firstItem="dI8-HG-fb4" firstAttribute="leading" secondItem="fyy-Mc-f1w" secondAttribute="leading" id="ze9-90-iUe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w2u-Ug-i3n"/>
+                    <navigationItem key="navigationItem" title="beep" id="w2u-Ug-i3n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhZ-te-qbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-512.79999999999995" y="103.89805097451276"/>
-        </scene>
-        <!--Boards View Old Controller-->
-        <scene sceneID="XWG-xd-XiW">
-            <objects>
-                <tableViewController id="j2f-9L-nvV" customClass="BoardsViewOldController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xom-FU-i5P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3Cb-Eu-L4F">
-                            <rect key="frame" x="0.0" y="178" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem title="Item" id="m3r-Ms-635"/>
-                            </items>
-                        </toolbar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="BD4-gy-WD2" rowHeight="150" style="IBUITableViewCellStyleDefault" id="URB-2s-VlK">
-                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="URB-2s-VlK" id="G9R-Xo-vK5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BD4-gy-WD2">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="149"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="j2f-9L-nvV" id="AfV-Up-Lu0"/>
-                            <outlet property="delegate" destination="j2f-9L-nvV" id="RvE-2S-A8x"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OAZ-RH-xOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="256.80000000000001" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fvt-Ii-bUz">
