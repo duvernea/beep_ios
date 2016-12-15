@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let boardStore = BoardStore()
         
         // Access the BoardsViewController and set its item store
-        let boardController = window!.rootViewController as! BoardsViewController
+        let navController = window!.rootViewController as! UINavigationController
+        let boardController = navController.topViewController as! BoardsViewController
+        
         boardController.boardsStore = boardStore
         return true
     }
