@@ -12,4 +12,10 @@ class BoardItemCell: UITableViewCell {
     
     @IBOutlet var boardNameLabel: UILabel!
     @IBOutlet var boardImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        boardNameLabel.adjustsFontForContentSizeCategory = true
+    }
 }
