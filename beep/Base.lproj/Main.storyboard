@@ -174,6 +174,7 @@
                                         <connections>
                                             <outlet property="boardImageView" destination="efC-0H-Dcf" id="56k-p4-Dwy"/>
                                             <outlet property="boardNameLabel" destination="53z-CK-1f8" id="fzd-zv-86l"/>
+                                            <segue destination="ZtJ-fO-rrY" kind="show" id="vtU-mw-7xK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -202,6 +203,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhZ-te-qbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-512.79999999999995" y="103.89805097451276"/>
+        </scene>
+        <!--Boards Detail View Controller-->
+        <scene sceneID="iWD-7r-9wM">
+            <objects>
+                <viewController id="ZtJ-fO-rrY" customClass="BoardsDetailViewController" customModule="beep" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Hl-qB-pMB"/>
+                        <viewControllerLayoutGuide type="bottom" id="1vW-e9-60O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XUS-Ch-Hwc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2J-48-Pjs">
+                                <rect key="frame" x="24" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z2J-48-Pjs" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="59Y-yD-IBX"/>
+                            <constraint firstItem="z2J-48-Pjs" firstAttribute="top" secondItem="0Hl-qB-pMB" secondAttribute="bottom" constant="8" id="X3s-CY-Fgd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="z2J-48-Pjs" id="soB-uc-H3f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PcN-0D-knG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-513" y="887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fvt-Ii-bUz">
