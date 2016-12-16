@@ -8,9 +8,25 @@
 
 import UIKit
 
-class BoardsDetailViewController: UIViewController {
+class BoardsDetailViewController: UIViewController,
+        UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var boardImage: UIImageView!
+    
+    @IBAction func choosePicture(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        imagePicker.delegate = self
+        
+        // Place image picker on the screen
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
     var board: Board!
     

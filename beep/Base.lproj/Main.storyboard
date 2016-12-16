@@ -228,14 +228,23 @@
                                     <constraint firstAttribute="height" constant="150" id="sz8-qs-EpW"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWe-JT-wyu">
+                                <rect key="frame" x="24" y="318" width="99" height="30"/>
+                                <state key="normal" title="Change Image"/>
+                                <connections>
+                                    <action selector="choosePicture:" destination="ZtJ-fO-rrY" eventType="touchUpInside" id="NoN-MP-f1v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="z2J-48-Pjs" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="59Y-yD-IBX"/>
                             <constraint firstItem="h4H-N8-1SQ" firstAttribute="top" secondItem="z2J-48-Pjs" secondAttribute="bottom" constant="49" id="VXU-B9-8AC"/>
                             <constraint firstItem="z2J-48-Pjs" firstAttribute="top" secondItem="0Hl-qB-pMB" secondAttribute="bottom" constant="8" id="X3s-CY-Fgd"/>
+                            <constraint firstItem="KWe-JT-wyu" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="cmU-VH-SIT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h4H-N8-1SQ" secondAttribute="trailing" constant="13" id="fF8-mt-0v7"/>
                             <constraint firstItem="h4H-N8-1SQ" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="fYX-QW-wzz"/>
+                            <constraint firstItem="KWe-JT-wyu" firstAttribute="top" secondItem="h4H-N8-1SQ" secondAttribute="bottom" constant="26" id="pWA-ZD-OD3"/>
                         </constraints>
                     </view>
                     <connections>
