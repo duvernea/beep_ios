@@ -11,6 +11,8 @@ import UIKit
 class BoardsViewController: UIViewController, UITableViewDataSource {
     
     var boardsStore: BoardStore!
+    
+    var imageStore: ImageStore!
 
     @IBOutlet var tableView: UITableView!
 
@@ -64,6 +66,7 @@ class BoardsViewController: UIViewController, UITableViewDataSource {
                 let board = boardsStore.allBoards[row]
                 let boardsDetailViewController = segue.destination as! BoardsDetailViewController
                 boardsDetailViewController.board = board
+                boardsDetailViewController.imageStore = imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier")

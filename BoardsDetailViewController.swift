@@ -14,6 +14,8 @@ class BoardsDetailViewController: UIViewController {
     
     var board: Board!
     
+    var imageStore: ImageStore!
+    
     let appName = "beep"
     
     override func viewWillAppear(_ animated: Bool) {

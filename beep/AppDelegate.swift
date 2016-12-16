@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let boardController = navController.topViewController as! BoardsViewController
         
         boardController.boardsStore = boardStore
+        boardController.imageStore = imageStore
         return true
     }
 
