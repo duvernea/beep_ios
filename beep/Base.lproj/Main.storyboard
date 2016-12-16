@@ -216,39 +216,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2J-48-Pjs">
-                                <rect key="frame" x="24" y="72" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4H-N8-1SQ">
-                                <rect key="frame" x="24" y="142" width="322" height="150"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-A4-Qkm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2J-48-Pjs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iea-nx-YDJ">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-7c-KmF">
+                                        <rect key="frame" x="0.0" y="320" width="375" height="30"/>
+                                        <state key="normal" title="Change Image"/>
+                                        <connections>
+                                            <action selector="choosePicture:" destination="ZtJ-fO-rrY" eventType="touchUpInside" id="0EB-VT-cDV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="sz8-qs-EpW"/>
+                                    <constraint firstAttribute="height" constant="350" id="USh-LH-7cN"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWe-JT-wyu">
-                                <rect key="frame" x="24" y="318" width="99" height="30"/>
-                                <state key="normal" title="Change Image"/>
-                                <connections>
-                                    <action selector="choosePicture:" destination="ZtJ-fO-rrY" eventType="touchUpInside" id="NoN-MP-f1v"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z2J-48-Pjs" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="59Y-yD-IBX"/>
-                            <constraint firstItem="h4H-N8-1SQ" firstAttribute="top" secondItem="z2J-48-Pjs" secondAttribute="bottom" constant="49" id="VXU-B9-8AC"/>
-                            <constraint firstItem="z2J-48-Pjs" firstAttribute="top" secondItem="0Hl-qB-pMB" secondAttribute="bottom" constant="8" id="X3s-CY-Fgd"/>
-                            <constraint firstItem="KWe-JT-wyu" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="cmU-VH-SIT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="h4H-N8-1SQ" secondAttribute="trailing" constant="13" id="fF8-mt-0v7"/>
-                            <constraint firstItem="h4H-N8-1SQ" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leadingMargin" constant="8" id="fYX-QW-wzz"/>
-                            <constraint firstItem="KWe-JT-wyu" firstAttribute="top" secondItem="h4H-N8-1SQ" secondAttribute="bottom" constant="26" id="pWA-ZD-OD3"/>
+                            <constraint firstAttribute="trailing" secondItem="rdU-A4-Qkm" secondAttribute="trailing" id="LK6-z4-0OS"/>
+                            <constraint firstItem="rdU-A4-Qkm" firstAttribute="top" secondItem="0Hl-qB-pMB" secondAttribute="bottom" id="LM2-QS-W2G"/>
+                            <constraint firstItem="rdU-A4-Qkm" firstAttribute="leading" secondItem="XUS-Ch-Hwc" secondAttribute="leading" id="ewQ-ew-YrD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="boardImage" destination="h4H-N8-1SQ" id="HjT-cM-sHE"/>
+                        <outlet property="boardImage" destination="Iea-nx-YDJ" id="rVg-Zs-alU"/>
                         <outlet property="textLabel" destination="z2J-48-Pjs" id="soB-uc-H3f"/>
                     </connections>
                 </viewController>

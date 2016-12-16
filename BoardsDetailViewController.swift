@@ -10,8 +10,13 @@ import UIKit
 
 class BoardsDetailViewController: UIViewController,
         UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var boardImage: UIImageView!
+    
+    var board: Board!
+    var imageStore: ImageStore!
+    let appName = "beep"
     
     @IBAction func choosePicture(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
@@ -27,24 +32,35 @@ class BoardsDetailViewController: UIViewController,
         present(imagePicker, animated: true, completion: nil)
     }
     
-    
-    var board: Board!
-    
-    var imageStore: ImageStore!
-    
-    let appName = "beep"
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Set navigation bar title to app name (for now at least)
         navigationItem.title = appName
         
-        
         //textLabel.text = board.name
         textLabel.text = board.name
-        boardImage.image = #imageLiteral(resourceName: "Deer")
-        boardImage.contentMode = UIViewContentMode.left;
         
+        let key = board.boardKey
+        
+        // If image, display it in image view
+        let imageToDisplay = imageStore.image(forKey: key)
+        
+        //boardImage.image = #imageLiteral(resourceName: "Deer")
+        boardImage.image = imageToDisplay
+        //boardImage.contentMode = UIViewContentMode.left;
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // Get picked image from info dictionary
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        // Store the image in the ImageStore for the item's key
+        imageStore.setImage(image, forKey: board.boardKey)
+        
+        // Put that image on the screen in the image view
+        boardImage.image = image
+        
+        // Take image picker off the screen
+        dismiss(animated: true, completion: nil)
     }
 }
