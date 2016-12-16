@@ -51,7 +51,18 @@ class BoardsViewController: UIViewController, UITableViewDataSource {
         
         let board = boardsStore.allBoards[indexPath.row]
         cell.boardNameLabel?.text = board.name
-        cell.boardImageView?.image = #imageLiteral(resourceName: "gorilla")
+        //cell.boardImageView?.image = #imageLiteral(resourceName: "gorilla")
+        let key = board.boardKey
+        print("board key: \(key)")
+        
+        // If image, display it in image view
+        let imageToDisplay = imageStore.image(forKey: key)
+        print("image size: \(imageToDisplay?.size)")
+        
+        
+        cell.boardImageView?.image = imageToDisplay
+        
+        
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,10 +82,5 @@ class BoardsViewController: UIViewController, UITableViewDataSource {
         default:
             preconditionFailure("Unexpected segue identifier")
         }
-
     }
-    
-
-    
-
 }

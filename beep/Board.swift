@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Board : NSObject {
+class Board : NSObject, NSCoding {
     var name: String
     var image: String?
     
@@ -20,5 +20,15 @@ class Board : NSObject {
         self.boardKey = UUID().uuidString
         
         super.init()
+    }
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObject(forKey: "name") as! String
+        boardKey = aDecoder.decodeObject(forKey: "boardKey") as! String
+        
+        super.init()
+    }
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(boardKey, forKey: "boardKey")
     }
 }
